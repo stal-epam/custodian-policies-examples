@@ -1,0 +1,9 @@
+# Command to run policy:
+# custodian run 02-custodian.yml -s 02-custodian --region us-east-1
+# for specific aws profile add to command --profile aws_profile
+
+policies:
+- name: policy-with-filters
+  resource: aws.ec2
+  filters:
+  - State.Name: running

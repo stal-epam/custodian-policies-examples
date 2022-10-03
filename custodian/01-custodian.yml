@@ -1,0 +1,7 @@
+# Command to run policy:
+# custodian run 01-custodian.yml -s 01-custodian --region us-east-1
+# for specific aws profile add to command --profile aws_profile
+
+policies:
+- name: my-first-policy
+  resource: aws.ec2

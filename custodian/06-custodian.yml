@@ -1,0 +1,25 @@
+# Command to run policy:
+# custodian run 06-custodian.yml -s 06-custodian --region us-east-1
+# for specific aws profile add to command --profile aws_profile
+
+policies:
+- name: policy-with-tag-compliance
+  resource: aws.ec2
+  description: |
+    Add tags to running EC2 instances launched without the required tags.
+  filters:
+  - State.Name: running
+  actions:
+  - type: tag
+    key: "Resource Contact"
+    value: "Ivan Ivanov"
+  - type: tag
+    key: "Resource email"
+    value: "epam@insider2022.com"
+  - type: tag
+    key: "Department"
+    value: "Developers"
+  - type: tag
+    key: "Environment"
+    value: "DEV"
+
