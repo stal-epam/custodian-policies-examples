@@ -11,15 +11,15 @@ variable "aws_profile" {
 }
 
 variable "instance_type" {
-  description = "Instance type t2.nano"
+  description = "Instance type t2"
   type        = string
-  default     = "t2.nano"
+  default     = "t2.micro"
 }
 
 variable "instance_count" {
   description = "Count of EC2 instances"
   type        = number
-  default     = 2
+  default     = 3
 }
 
 variable "instance_name_tags" {
