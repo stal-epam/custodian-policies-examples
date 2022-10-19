@@ -3,12 +3,11 @@
 # for specific aws profile add to command --profile aws_profile
 
 policies:
-- name: policy-terminate-ec2-protection
+- name: policy-terminate-ec2
   resource: aws.ec2
   description: |
-    Terminate instances with termination protection
+    Terminate instances without termination protection
   filters:
   - State.Name: running
   actions:
-  - type: terminate
-    force: true
+  - terminate

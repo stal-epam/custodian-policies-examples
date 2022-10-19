@@ -24,6 +24,7 @@ aws configure list-profiles
 # terraform
 terraform plan
 terraform apply
+# for destroy you should change termination protection for EC2 <disable_api_termination = false>
 terraform destroy
 ```
 ```python
@@ -36,3 +37,6 @@ custodian run --cache-period 0 <policy.yml> -s <output-dir> --region <AWS-region
 # cloud custodian verbose mode
 custodian run --cache-period 0 <policy.yml> -s <output-dir> --region <AWS-region> --profile <AWS-profile> --verbose
 ```
+## Links
+[Cloud Custodian Documentation](https://cloudcustodian.io/docs/)\
+[Terraform Documentation](https://www.terraform.io/docs)
